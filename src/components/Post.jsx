@@ -7,6 +7,6 @@ function Post({ author, body }) {
       <p className={classes.text}>{body}</p>
     </li>
   );
-};
+}
 
 export default Post;
