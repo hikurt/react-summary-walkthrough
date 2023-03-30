@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Post from './Post';
 import NewPost from './NewPost';
@@ -8,13 +8,23 @@ import classes from './PostsList.module.css';
 function PostsList({ isPosting, onStopPosting }) {
   const [posts, setPosts] = useState([]);
 
+  useEffect(() => {
+    async function fetchPosts() {
+      const response = await fetch('https://githubrx6umd-oymm--8080.local-credentialless.webcontainer.io/posts');
+      const resData = await response.json();
+      setPosts(resData.posts);
+    }
+
+    fetchPosts();
+  }, []);
+
   function addPostHandler(postData) {
-    fetch('/https://expressjs3nfgbn-cay1--8080.local-credentialless.webcontainer.io/posts',{
+    fetch('https://githubrx6umd-oymm--8080.local-credentialless.webcontainer.io/posts', {
       method: 'POST',
       body: JSON.stringify(postData),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     });
     setPosts((existingPosts) => [postData, ...existingPosts]);
   }
