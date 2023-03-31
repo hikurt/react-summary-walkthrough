@@ -14,7 +14,7 @@ function PostsList() {
       const res = await fetch('https://githubrx6umd-oymm--8080.local-credentialless.webcontainer.io/posts');
       const resData = await res.json();
       if(!res.ok){
-
+        console.log('Cant fetch data');
       }
       setPosts(resData.posts);
       setIsFetching(false);
