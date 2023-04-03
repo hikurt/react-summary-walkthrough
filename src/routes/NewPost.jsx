@@ -7,7 +7,7 @@ import classes from './NewPost.module.css';
 function NewPost() {
   return (
     <Modal>
-      <Form className={classes.form} >
+      <Form method='post' className={classes.form} >
         <p>
           <label htmlFor="body">Text</label>
           <textarea id="body" name='body' required rows={3} />
@@ -29,12 +29,16 @@ function NewPost() {
 
 export default NewPost;
 
-export function action() {
-  fetch('https://githubrx6umd-oymm--8080.local-credentialless.webcontainer.io/posts', {
+export async function action({request}) {
+  const formData = await request.formData();  
+  const postData = Object.fromEntries(formData); //{ body '...', author: '...' }
+
+  await fetch('https://githubrx6umd-oymm--8080.local-credentialless.webcontainer.io/posts', {
     method: 'POST',
     body: JSON.stringify(postData),
     headers: {
       'Content-Type': 'application/json',
     },
   });
+  return redirect('/');
 }
