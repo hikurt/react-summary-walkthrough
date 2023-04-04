@@ -1,1 +1,21 @@
-{"posts":[{"body":"df","author":"sdf","id":"0.2169052395698443"},{"body":"Plx stackblitz read that","author":"Just me","id":"post-123"},{"body":"Something new here","author":"New author","id":"post-123"}]}
+{
+  "posts": [
+    {
+      "body": "Yeah thats working wel",
+      "author": "John",
+      "id": "0.8640859495060291"
+    },
+    {
+      "body": "Is it adding to the file or not",
+      "author": "Greg",
+      "id": "0.7246213758040814"
+    },
+    { "body": "df", "author": "sdf", "id": "0.2169052395698443" },
+    {
+      "body": "Plx stackblitz read that",
+      "author": "Just me",
+      "id": "post-123"
+    },
+    { "body": "Something new here", "author": "New author", "id": "post-123" }
+  ]
+}
