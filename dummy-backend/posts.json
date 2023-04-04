@@ -1,5 +1,6 @@
 {
   "posts": [
+    { "body": "It is just test", "author": "Test", "id": "0.5205620431867342" },
     {
       "body": "Yeah thats working wel",
       "author": "John",
