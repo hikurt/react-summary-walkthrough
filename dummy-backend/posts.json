@@ -1,14 +1,1 @@
-{
-  "posts": [
-    {
-      "body": "Plx stackblitz read that",
-      "author": "Just me",
-      "id": "post-123"
-    },
-    {
-      "body":"Something new here",
-      "author":"New author",
-      "id": "post-123"
-    }
-  ]
-}
+{"posts":[{"body":"df","author":"sdf","id":"0.2169052395698443"},{"body":"Plx stackblitz read that","author":"Just me","id":"post-123"},{"body":"Something new here","author":"New author","id":"post-123"}]}
